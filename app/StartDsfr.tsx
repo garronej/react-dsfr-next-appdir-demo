@@ -15,6 +15,6 @@ startReactDsfr({
 	Link
 });
 
-export default function StartDsfr(){
+export function StartDsfr(){
 	return null;
 }
