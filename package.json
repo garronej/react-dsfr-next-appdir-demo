@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && next export",
         "start": "next start",
         "lint": "next lint",
         "predev": "only-include-used-icons",
@@ -24,7 +24,7 @@
         "@mui/x-date-pickers": "^5.0.12",
         "dayjs": "^1.11.7",
         "@mui/x-data-grid": "^5.17.17",
-        "@codegouvfr/react-dsfr": "^0.17.0"
+        "@codegouvfr/react-dsfr": "^0.17.2"
     },
     "devDependencies": {
         "@types/node": "^18.8.2",
