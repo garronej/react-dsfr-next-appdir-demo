@@ -6,7 +6,6 @@ import { StartDsfr } from "./StartDsfr";
 import { defaultColorScheme } from "./defaultColorScheme";
 import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 import { Footer } from "@codegouvfr/react-dsfr/Footer";
-import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 
 const brandTop = <>INTITULE<br />OFFICIEL</>;
 
@@ -31,15 +30,8 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 							<Footer
 								brandTop={brandTop}
 								accessibility="fully compliant"
-								contentDescription={`
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                    eu fugiat nulla pariatur. 
-                `}
+								contentDescription={""}
 								homeLinkProps={homeLinkPops}
-								bottomItems={[headerFooterDisplayItem]}
 							/>
 						</MuiDsfrThemeProvider>
 					</NextAppDirEmotionCacheProvider>
