@@ -85,10 +85,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@codegouvfr/react-dsfr@^0.17.7":
-  version "0.17.7"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-0.17.7.tgz#d92cbee8d077270306f55037c4293d5aca4fa686"
-  integrity sha512-XXkfbz8l71i8LzcbKH6wk10WIqR9fwfhQeC7l3Q8m9dbLVOIoKd/3cozRZiXXB0G0246SlR5VD6bQS428FYawg==
+"@codegouvfr/react-dsfr@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-0.18.0.tgz#ca2b0278d04bc8e63a441a44640fcb7a099d9f18"
+  integrity sha512-XtDHEtJdbMthYyiqKCAMKVtK49iqm4AWCpYEFioXUxXC1lA+0snr9NIpLZlXUm+DGpVe5bYqsP9XjbBWq1tpWw==
   dependencies:
     tsafe "^1.4.0"
 
@@ -110,18 +110,7 @@
     source-map "^0.5.7"
     stylis "4.1.3"
 
-"@emotion/cache@*":
-  version "11.10.3"
-  resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.10.3.tgz#c4f67904fad10c945fea5165c3a5a0583c164b87"
-  integrity sha512-Psmp/7ovAa8appWh3g51goxu/z3iVms7JXOreq136D8Bbn6dYraPnmL6mdM8GThEx9vwSn92Fz+mGSjBzN8UPQ==
-  dependencies:
-    "@emotion/memoize" "^0.8.0"
-    "@emotion/sheet" "^1.2.0"
-    "@emotion/utils" "^1.2.0"
-    "@emotion/weak-memoize" "^0.3.0"
-    stylis "4.0.13"
-
-"@emotion/cache@^11.10.5":
+"@emotion/cache@11.10.5", "@emotion/cache@^11.10.5":
   version "11.10.5"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.10.5.tgz#c142da9351f94e47527ed458f7bbbbe40bb13c12"
   integrity sha512-dGYHWyzTdmK+f2+EnIGBpkz1lKc4Zbj2KHd4cX3Wi8/OWr5pKslNjc3yABKH4adRGCvSX4VDC0i04mrrq0aiRA==
@@ -163,17 +152,6 @@
     "@emotion/weak-memoize" "^0.3.0"
     hoist-non-react-statics "^3.3.1"
 
-"@emotion/serialize@*":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.1.0.tgz#b1f97b1011b09346a40e9796c37a3397b4ea8ea8"
-  integrity sha512-F1ZZZW51T/fx+wKbVlwsfchr5q97iW8brAnXmsskz4d0hVB4O3M/SiA3SaeH06x02lSNzkkQv+n3AX3kCXKSFA==
-  dependencies:
-    "@emotion/hash" "^0.9.0"
-    "@emotion/memoize" "^0.8.0"
-    "@emotion/unitless" "^0.8.0"
-    "@emotion/utils" "^1.2.0"
-    csstype "^3.0.2"
-
 "@emotion/serialize@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.1.1.tgz#0595701b1902feded8a96d293b26be3f5c1a5cf0"
@@ -194,11 +172,6 @@
     html-tokenize "^2.0.0"
     multipipe "^1.0.2"
     through "^2.3.8"
-
-"@emotion/sheet@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.2.0.tgz#771b1987855839e214fc1741bde43089397f7be5"
-  integrity sha512-OiTkRgpxescko+M51tZsMq7Puu/KP55wMT8BgpcXVG2hqXc0Vo0mfymJ/Uj24Hp0i083ji/o0aLddh08UEjq8w==
 
 "@emotion/sheet@^1.2.1":
   version "1.2.1"
@@ -227,7 +200,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/use-insertion-effect-with-fallbacks/-/use-insertion-effect-with-fallbacks-1.0.0.tgz#ffadaec35dbb7885bd54de3fa267ab2f860294df"
   integrity sha512-1eEgUGmkaljiBnRMTdksDV1W4kUnmwgp7X9G8B++9GYwl1lUdqSndSriIrTJ0N7LQaoauY9JJ2yhiOYK5+NI4A==
 
-"@emotion/utils@*", "@emotion/utils@^1.2.0":
+"@emotion/utils@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-1.2.0.tgz#9716eaccbc6b5ded2ea5a90d65562609aab0f561"
   integrity sha512-sn3WH53Kzpw8oQ5mgMmIzzyAaH2ZqFEbozVVBSYp538E06OSE6ytOp7pRAjNQR+Q/orwqdQYJSe2m3hCOeznkw==
@@ -2235,11 +2208,6 @@ styled-jsx@5.1.0:
   dependencies:
     client-only "0.0.1"
 
-stylis@4.0.13:
-  version "4.0.13"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.13.tgz#f5db332e376d13cc84ecfe5dace9a2a51d954c91"
-  integrity sha512-xGPXiFVl4YED9Jh7Euv2V220mriG9u4B2TA6Ybjc1catrstKD2PpIdU3U0RKpkVBC2EhmL/F0sPCr9vrFTNRag==
-
 stylis@4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.1.3.tgz#fd2fbe79f5fed17c55269e16ed8da14c84d069f7"
@@ -2329,15 +2297,6 @@ tslib@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
-
-tss-react@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/tss-react/-/tss-react-4.5.1.tgz#6d347f2e7edc54e5602cc4c71c1db003f4cd37d4"
-  integrity sha512-5tImgVq1pfOQS9Kg4oJNKFDW29lILbtUc4QgwCaaSQK3KfkZrXTKVSD4uZt6Tk6UThWCHAJ5CLEBWyECPSs+eg==
-  dependencies:
-    "@emotion/cache" "*"
-    "@emotion/serialize" "*"
-    "@emotion/utils" "*"
 
 tsutils@^3.21.0:
   version "3.21.0"

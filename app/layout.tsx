@@ -1,4 +1,4 @@
-import { NextAppDirEmotionCacheProvider } from "tss-react/next";
+import { NextAppDirEmotionCacheProvider } from "./NextAppDirEmotionCacheProvider";
 import { Badge } from "@codegouvfr/react-dsfr/Badge";
 import "@codegouvfr/react-dsfr/dsfr/dsfr.css";
 
@@ -6,9 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
 	return (
 		<html data-fr-theme="dark">
-			<head >
-				<title>Next 13 AppDir Demo DSFR setup</title>
-			</head>
+			<head></head>
 			<body>
 				<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
 					{children}
