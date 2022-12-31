@@ -4,10 +4,6 @@ import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir
 import { defaultColorScheme } from "./defaultColorScheme";
 import { Footer } from "@codegouvfr/react-dsfr/Footer";
 
-const brandTop = <>INTITULE<br />OFFICIEL</>;
-
-const homeLinkPops = { "href": "/", "title": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)" };
-
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
 	return (
@@ -19,15 +15,15 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				/>
 			</head>
 			<body>
-					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
-							{children}
-							<Footer
-								brandTop={brandTop}
-								accessibility="fully compliant"
-								contentDescription={""}
-								homeLinkProps={homeLinkPops}
-							/>
-					</NextAppDirEmotionCacheProvider>
+				<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
+					{children}
+					<Footer
+						brandTop={<>INTITULE<br />OFFICIEL</>}
+						accessibility="fully compliant"
+						contentDescription={""}
+						homeLinkProps={{ "href": "/", "title": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)" }}
+					/>
+				</NextAppDirEmotionCacheProvider>
 			</body>
 		</html>
 	);
