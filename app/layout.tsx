@@ -2,7 +2,6 @@ import { NextAppDirEmotionCacheProvider } from "tss-react/next";
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getColorSchemeHtmlAttributes";
-import { StartDsfr } from "./StartDsfr";
 import { defaultColorScheme } from "./defaultColorScheme";
 import { Footer } from "@codegouvfr/react-dsfr/Footer";
 
@@ -16,7 +15,6 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 		<html {...getColorSchemeHtmlAttributes({ defaultColorScheme })} >
 			<head>
 				<title>Next 13 AppDir Demo DSFR setup</title>
-				<StartDsfr />
 				<DsfrHead
 					defaultColorScheme={defaultColorScheme}
 				/>
