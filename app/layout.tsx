@@ -4,7 +4,6 @@ import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getColorSchemeHtmlAttributes";
 import { StartDsfr } from "./StartDsfr";
 import { defaultColorScheme } from "./defaultColorScheme";
-import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 import { Footer } from "@codegouvfr/react-dsfr/Footer";
 
 const brandTop = <>INTITULE<br />OFFICIEL</>;
@@ -25,7 +24,6 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 			<body>
 				<DsfrProvider defaultColorScheme={defaultColorScheme}>
 					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
-						<MuiDsfrThemeProvider>
 							{children}
 							<Footer
 								brandTop={brandTop}
@@ -33,7 +31,6 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								contentDescription={""}
 								homeLinkProps={homeLinkPops}
 							/>
-						</MuiDsfrThemeProvider>
 					</NextAppDirEmotionCacheProvider>
 				</DsfrProvider>
 			</body>
