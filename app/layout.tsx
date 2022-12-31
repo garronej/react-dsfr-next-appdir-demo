@@ -30,13 +30,6 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				<DsfrProvider defaultColorScheme={defaultColorScheme}>
 					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
 						<MuiDsfrThemeProvider>
-							<Header
-								brandTop={brandTop}
-								serviceTitle="Nom du site / service"
-								homeLinkProps={homeLinkPops}
-								quickAccessItems={[headerFooterDisplayItem]}
-								navigation={<Navigation />}
-							/>
 							<div style={{
 								"margin": "auto",
 								"maxWidth": 1000,
