@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -63,39 +61,17 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-const muiDefaultDarkTheme = createTheme({
-	"palette": {
-		"mode": "dark"
-	}
-});
-
-const muiDefaultLightTheme = createTheme({
-	"palette": {
-		"mode": "light"
-	}
-});
-
-
 export default function Mui() {
 
 	const { isDark, setIsDark } = useIsDark();
 
-	const [isProviderEnabled, setIsProviderEnabled] = React.useState(true);
-
-	const Children = () => (
+	return (
 		<>
-			<FormControlLabel control={<Switch
-				checked={isProviderEnabled}
-				onChange={event => setIsProviderEnabled(event.target.checked)}
-				inputProps={{ 'aria-label': 'controlled' }}
-			/>} label="Is provider enabled" />
-			<br />
 			<FormControlLabel control={<Switch
 				checked={isDark}
 				onChange={event => setIsDark(event.target.checked)}
 				inputProps={{ 'aria-label': 'controlled' }}
 			/>} label="Dark mode" />
-
 			<Typography sx={{ mt: 2 }} variant="h4">
 				This is a place for testing MUI components
 			</Typography>
@@ -110,18 +86,6 @@ export default function Mui() {
 			<Links />
 			<RecipeReviewCard />
 		</>
-	);
-
-	return (
-		isProviderEnabled ? (
-			<MuiDsfrThemeProvider>
-				<Children />
-			</MuiDsfrThemeProvider>
-		) : (
-			<ThemeProvider theme={isDark ? muiDefaultDarkTheme : muiDefaultLightTheme}>
-				<Children />
-			</ThemeProvider>
-		)
 	);
 }
 
@@ -698,7 +662,6 @@ const { RecipeReviewCard } = (() => {
 	}
 
 	const ExpandMore = styled((props: ExpandMoreProps) => {
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		const { expand, ...other } = props;
 		return <IconButton {...other} />;
 	})(({ theme, expand }) => ({
