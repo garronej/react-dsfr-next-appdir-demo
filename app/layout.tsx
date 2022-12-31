@@ -1,5 +1,5 @@
 import { NextAppDirEmotionCacheProvider } from "./NextAppDirEmotionCacheProvider";
-import { Badge } from "@codegouvfr/react-dsfr/Badge";
+import { Badge } from "./Badge";
 import "@codegouvfr/react-dsfr/dsfr/dsfr.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
