@@ -6,42 +6,46 @@ import Switch from '@mui/material/Switch';
 
 const isBrowser = typeof window === "object" && typeof document === "object";
 
-export default function Mui() {
+console.log("evaluate app/page.tsx");
 
-	const [isSomething, setIsSomething] = useState(false);
+export default function Page() {
+
+	const [isSuccessfullyHydrated, setIsSuccessfullyHydrated] = useState(false);
 
 	useEffect(
 		() => {
-			setIsSomething(true);
+			setIsSuccessfullyHydrated(true);
 		},
 		[]
 	);
 
 	useState(
 		() => {
-
-
 			if (isBrowser) {
 
+				console.log("rendering app/page.tsx");
+
 				queueMicrotask(() => {
-					console.log("micro task after client side render");
+					console.log("micro task after rendering app/page.tsx");
 				});
 
 			}
 		}
 	);
 
-	if( isSomething ){
-		console.log("successful hydration");
+	if (isSuccessfullyHydrated) {
+		queueMicrotask(() => {
+			console.log("micro task after successful hydration");
+		});
 	}
 
 	return (
 		<>
 			<FormControlLabel control={<Switch
-				checked={isSomething}
-				onChange={event => setIsSomething(event.target.checked)}
+				checked={isSuccessfullyHydrated}
+				onChange={event => setIsSuccessfullyHydrated(event.target.checked)}
 				inputProps={{ 'aria-label': 'controlled' }}
-			/>} label="Something" />
+			/>} label={`Hydrated (${isSuccessfullyHydrated ? "yes" : "not yet"})`} />
 		</>
 	);
 }

@@ -9,6 +9,8 @@ import { CacheProvider as DefaultCacheProvider } from "@emotion/react";
 import type { Options as OptionsOfCreateCache } from "@emotion/cache";
 import type { EmotionCache } from "@emotion/cache";
 
+console.log("===================== evaluate app/NextAppDirEmotionCacheProvider.tsx");
+
 export type NextAppDirEmotionCacheProviderProps = {
     /** This is the options passed to createCache() from 'import createCache from "@emotion/cache"' */
     options: Omit<OptionsOfCreateCache, "insertionPoint">;
@@ -62,6 +64,8 @@ export function NextAppDirEmotionCacheProvider(
             />
         );
     });
+
+    console.log("render NextAppDirEmotionCacheProvider");
 
     return <CacheProvider value={cache}>{children}</CacheProvider>;
 }
