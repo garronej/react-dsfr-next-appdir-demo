@@ -1,21 +1,20 @@
-import { NextAppDirEmotionCacheProvider } from "./NextAppDirEmotionCacheProvider";
-import { Badge } from "./Badge";
-import "@codegouvfr/react-dsfr/dsfr/dsfr.css";
+
+import Script from "next/script";
+import testJsUrl from "./test.min.js";
+
+console.log({ testJsUrl });
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
 
 	return (
-		<html data-fr-theme="dark">
-			<head></head>
+		<html>
+			<head>
+				<Script src={testJsUrl}/>
+			</head>
 			<body>
-				<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
-					{children}
-					<Badge
-						label="Label badge"
-						severity="success"
-					/>
-				</NextAppDirEmotionCacheProvider>
+				{children}
 			</body>
 		</html>
 	);
+
 }

@@ -10,7 +10,7 @@ const nextConfig = {
   webpack: config => {
 
     config.module.rules.push({
-      test: /\.woff2$/,
+      test: /\.min\.js$/,
       type: "asset/resource"
     });
 
