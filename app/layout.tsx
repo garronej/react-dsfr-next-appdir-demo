@@ -4,7 +4,7 @@ import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getColorSchemeHtmlAttributes";
 import { StartDsfr } from "./StartDsfr";
 import { defaultColorScheme } from "./defaultColorScheme";
-import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
+import MuiDsfrThemeProvider from "@codegouvfr/react-dsfr/mui";
 import { Header } from "@codegouvfr/react-dsfr/Header";
 import { Footer } from "@codegouvfr/react-dsfr/Footer";
 import { Display, headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
