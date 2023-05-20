@@ -24,7 +24,7 @@
         "@mui/x-date-pickers": "^5.0.12",
         "dayjs": "^1.11.7",
         "@mui/x-data-grid": "^5.0.12",
-        "@codegouvfr/react-dsfr": "^0.54.9-rc.0"
+        "@codegouvfr/react-dsfr": "0.54.10-rc.2"
     },
     "devDependencies": {
         "@types/node": "^18.8.2",
