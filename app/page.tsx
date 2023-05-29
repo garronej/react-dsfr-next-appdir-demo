@@ -3,6 +3,7 @@ import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { Tabs } from "@codegouvfr/react-dsfr/Tabs";
 import { Summary } from "@codegouvfr/react-dsfr/Summary";
 import { fr } from "@codegouvfr/react-dsfr";
+import { ClientComponent } from "../ui/ClientComponent";
 
 export default function Page() {
 
@@ -57,7 +58,7 @@ export default function Page() {
                     }
                 ]}
             />
-            {/*<ClientComponent />*/}
+            <ClientComponent />
         </>
     );
 
