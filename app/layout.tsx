@@ -24,6 +24,18 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				<StartDsfr />
 				<DsfrHead
 					defaultColorScheme={defaultColorScheme}
+					preloadFonts={[
+						//"Marianne-Light",
+							//"Marianne-Light_Italic",
+						"Marianne-Regular",
+						//"Marianne-Regular_Italic",
+						"Marianne-Medium",
+						//"Marianne-Medium_Italic",
+						"Marianne-Bold"
+						//"Marianne-Bold_Italic",
+						//"Spectral-Regular",
+						//"Spectral-ExtraBold"
+					]}
 				/>
 			</head>
 			<body
