@@ -18,7 +18,14 @@ const homeLinkPops = { "href": "/", "title": "Accueil - Nom de l’entité (mini
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
 	return (
-		<html {...getColorSchemeHtmlAttributes({ defaultColorScheme })} >
+		<html
+			{...getColorSchemeHtmlAttributes({ defaultColorScheme })}
+			//NOTE: Scrollbar always visible to avoid layout shift when modal are opened
+			style={{
+				"overflow": "-moz-scrollbars-vertical",
+				"overflowY": "scroll"
+			}}
+		>
 			<head>
 				<title>Next 13 AppDir Demo DSFR setup</title>
 				<StartDsfr />
@@ -26,7 +33,7 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 					defaultColorScheme={defaultColorScheme}
 					preloadFonts={[
 						//"Marianne-Light",
-							//"Marianne-Light_Italic",
+						//"Marianne-Light_Italic",
 						"Marianne-Regular",
 						//"Marianne-Regular_Italic",
 						"Marianne-Medium",
@@ -39,11 +46,11 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				/>
 			</head>
 			<body
-			style={{
-				"height": "100vh",
-				"display": "flex",
-				"flexDirection": "column"
-			}}
+				style={{
+					"height": "100vh",
+					"display": "flex",
+					"flexDirection": "column"
+				}}
 			>
 				<DsfrProvider defaultColorScheme={defaultColorScheme}>
 					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
