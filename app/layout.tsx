@@ -52,7 +52,14 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								brandTop={brandTop}
 								serviceTitle="Nom du site / service"
 								homeLinkProps={homeLinkPops}
-								quickAccessItems={[headerFooterDisplayItem]}
+								quickAccessItems={[
+									headerFooterDisplayItem,
+									{
+										"iconId": "ri-account-box-line",
+										"text": "Mon compte",
+										"linkProps": { "href": "#" }
+									}
+								]}
 								navigation={<Navigation />}
 							/>
 							<div style={{
