@@ -73,10 +73,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@codegouvfr/react-dsfr@^0.58.9":
-  version "0.58.9"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-0.58.9.tgz#7001bda5d05871ccd7f98eae08b0b6cb18668348"
-  integrity sha512-bvjb3aBMzhtkf/6kmMCYAslzNDWDCr/cjK9OWLc9ujFVwu2MvDYGXB0cqdiwlZ/Qs91vgyuHXZBIb4P9hoR8ZA==
+"@codegouvfr/react-dsfr@^0.59.0":
+  version "0.59.0"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-0.59.0.tgz#05b093a05a2d4270413643d05de8faa825f8f05c"
+  integrity sha512-2yyXhH1M/K9hVJtKnHAwP2/tE54K2IDgDjzVIV6FczjaCcLfOvqpI0ZvCVIulLJpFcO8d1nC4CwlAChDnioz/Q==
   dependencies:
     tsafe "^1.6.3"
 
@@ -845,9 +845,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001406:
-  version "1.0.30001414"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001414.tgz#5f1715e506e71860b4b07c50060ea6462217611e"
-  integrity sha512-t55jfSaWjCdocnFdKQoO+d2ct9C59UZg4dY3OnUlSZ447r8pUtIKdp0hpAzrGFultmTC+Us+KpKi4GZl/LXlFg==
+  version "1.0.30001492"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001492.tgz"
+  integrity sha512-2efF8SAZwgAX1FJr87KWhvuJxnGJKOnctQa8xLOskAXNXq8oiuqgl6u1kk3fFpsp3GgvzlRjiK1sl63hNtFADw==
 
 chalk@^2.0.0:
   version "2.4.2"
