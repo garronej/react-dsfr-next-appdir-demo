@@ -11,6 +11,7 @@ export default function Page() {
         <>
             <a href="https://github.com/garronej/react-dsfr-next-appdir-demo" target="_blank" rel="noreferrer">Source code of this Next.js App Router demo setup</a>
             <br/>
+            <br/>
             <Summary
                 links={[
                     {
