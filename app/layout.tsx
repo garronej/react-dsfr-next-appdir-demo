@@ -1,7 +1,7 @@
 import { NextAppDirEmotionCacheProvider } from "tss-react/next";
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
-import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getColorSchemeHtmlAttributes";
+import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
 import { StartDsfr } from "./StartDsfr";
 import { defaultColorScheme } from "./defaultColorScheme";
 import MuiDsfrThemeProvider from "@codegouvfr/react-dsfr/mui";
@@ -10,16 +10,13 @@ import { Footer } from "@codegouvfr/react-dsfr/Footer";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Navigation } from "./Navigation";
-
-const brandTop = <>INTITULE<br />OFFICIEL</>;
-
-const homeLinkPops = { "href": "/", "title": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)" };
+import Link from "next/link";
 
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
 	return (
 		<html
-			{...getColorSchemeHtmlAttributes({ defaultColorScheme })}
+			{...getHtmlAttributes({ defaultColorScheme })}
 			//NOTE: Scrollbar always visible to avoid layout shift when modal are opened
 			style={{
 				"overflow": "-moz-scrollbars-vertical",
@@ -30,7 +27,7 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				<title>Next 13 AppDir Demo DSFR setup</title>
 				<StartDsfr />
 				<DsfrHead
-					defaultColorScheme={defaultColorScheme}
+					Link={Link}
 					preloadFonts={[
 						//"Marianne-Light",
 						//"Marianne-Light_Italic",
@@ -52,13 +49,16 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 					"flexDirection": "column"
 				}}
 			>
-				<DsfrProvider defaultColorScheme={defaultColorScheme}>
+				<DsfrProvider>
 					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
 						<MuiDsfrThemeProvider>
 							<Header
-								brandTop={brandTop}
+								brandTop={<>INTITULE<br />OFFICIEL</>}
 								serviceTitle="Nom du site / service"
-								homeLinkProps={homeLinkPops}
+								homeLinkProps={{
+									"href": "/",
+									"title": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+								}}
 								quickAccessItems={[
 									headerFooterDisplayItem,
 									{
@@ -80,7 +80,6 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								{children}
 							</div>
 							<Footer
-								brandTop={brandTop}
 								accessibility="fully compliant"
 								contentDescription={`
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -89,7 +88,6 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
                     eu fugiat nulla pariatur. 
                 `}
-								homeLinkProps={homeLinkPops}
 								bottomItems={[headerFooterDisplayItem]}
 							/>
 						</MuiDsfrThemeProvider>
