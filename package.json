@@ -11,7 +11,7 @@
         "prebuild": "only-include-used-icons"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^0.60.0",
+        "@codegouvfr/react-dsfr": "^0.62.0",
         "@emotion/react": "^11.11.0",
         "@emotion/server": "^11.11.0",
         "@emotion/styled": "^11.11.0",
