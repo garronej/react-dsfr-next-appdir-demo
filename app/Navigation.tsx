@@ -23,6 +23,13 @@ export function Navigation() {
 						"href": "/mui"
 					},
 					"isActive": segment === "mui"
+				},
+				{
+					"text": "Empty page",
+					"linkProps": {
+						"href": "/empty"
+					},
+					"isActive": segment === "empty"
 				}
 			]}
 		/>
