@@ -11,6 +11,7 @@ import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Navigation } from "./Navigation";
 import Link from "next/link";
+import { LoginHeaderItem } from "./LoginHeaderItem";
 
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
@@ -62,10 +63,13 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								quickAccessItems={[
 									headerFooterDisplayItem,
 									{
-										"iconId": "ri-account-box-line",
-										"text": "Mon compte",
-										"linkProps": { "href": "#" }
-									}
+										"iconId": "fr-icon-mail-fill",
+										"linkProps": {
+											"href": "mailto:contact@code.gouv.fr",
+										},
+										"text": "Contact us"
+									},
+									<LoginHeaderItem key={0} />
 								]}
 								navigation={<Navigation />}
 							/>
