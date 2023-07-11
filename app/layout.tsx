@@ -12,6 +12,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Navigation } from "./Navigation";
 import Link from "next/link";
 import { LoginHeaderItem } from "./LoginHeaderItem";
+import { 
+	ConsentBannerAndConsentManagement, 
+	FooterConsentManagementItem, 
+	FooterPersonalDataPolicyItem 
+} from "./consentManagement";
 
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
@@ -51,6 +56,7 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				}}
 			>
 				<DsfrProvider>
+					<ConsentBannerAndConsentManagement />
 					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
 						<MuiDsfrThemeProvider>
 							<Header
@@ -92,7 +98,11 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
                     eu fugiat nulla pariatur. 
                 `}
-								bottomItems={[headerFooterDisplayItem]}
+								bottomItems={[
+									headerFooterDisplayItem,
+									<FooterConsentManagementItem key={0}/>,
+									<FooterPersonalDataPolicyItem key={1} />
+								]}
 							/>
 						</MuiDsfrThemeProvider>
 					</NextAppDirEmotionCacheProvider>
