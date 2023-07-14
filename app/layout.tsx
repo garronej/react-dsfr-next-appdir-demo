@@ -12,11 +12,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Navigation } from "./Navigation";
 import Link from "next/link";
 import { LoginHeaderItem } from "./LoginHeaderItem";
-import { 
-	ConsentBannerAndConsentManagement, 
-	FooterConsentManagementItem, 
-	FooterPersonalDataPolicyItem 
-} from "./consentManagement";
+import {
+	ConsentBannerAndConsentManagement,
+	FooterConsentManagementItem,
+	FooterPersonalDataPolicyItem
+} from "../ui/consentManagement";
 
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
@@ -79,14 +79,15 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								]}
 								navigation={<Navigation />}
 							/>
-							<div style={{
-								"flex": 1,
-								"margin": "auto",
-								"maxWidth": 1000,
-								...fr.spacing("padding", {
-									"topBottom": "10v"
-								})
-							}}>
+							<div
+								style={{
+									"flex": 1,
+									"margin": "auto",
+									"maxWidth": 1000,
+									...fr.spacing("padding", {
+										"topBottom": "10v"
+									})
+								}}>
 								{children}
 							</div>
 							<Footer
@@ -100,7 +101,7 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
                 `}
 								bottomItems={[
 									headerFooterDisplayItem,
-									<FooterConsentManagementItem key={0}/>,
+									<FooterConsentManagementItem key={0} />,
 									<FooterPersonalDataPolicyItem key={1} />
 								]}
 							/>

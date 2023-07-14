@@ -6,7 +6,8 @@ import { startEulerianAnalytics } from "@codegouvfr/react-dsfr/eulerianAnalytics
 const prEulerianApi = startEulerianAnalytics({
     "domain": "zpzs.next-demo.react-dsfr.fr",
     "site": {
-        "environment": process.env.NODE_ENV === "development" ? "development" : "production"
+        "environment": process.env.NODE_ENV === "development" ? "development" : "production",
+        "entity": "Direction interministeriel du numérique"
     }
 });
 
