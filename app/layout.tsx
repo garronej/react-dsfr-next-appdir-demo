@@ -21,14 +21,7 @@ import {
 export default function RootLayout({ children }: { children: JSX.Element; }) {
 
 	return (
-		<html
-			{...getHtmlAttributes({ defaultColorScheme })}
-			//NOTE: Scrollbar always visible to avoid layout shift when modal are opened
-			style={{
-				"overflow": "-moz-scrollbars-vertical",
-				"overflowY": "scroll"
-			}}
-		>
+		<html {...getHtmlAttributes({ defaultColorScheme })}>
 			<head>
 				<title>Next 13 AppDir Demo DSFR setup</title>
 				<StartDsfr />
