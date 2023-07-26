@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								quickAccessItems={[
 									headerFooterDisplayItem,
 									{
-										"iconId": "fr-icon-mail-fill",
+										"iconId": "ri-mail-line",
 										"linkProps": {
 											"href": "mailto:contact@code.gouv.fr",
 										},

@@ -11,14 +11,14 @@
         "prebuild": "only-include-used-icons"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^0.73.0",
+        "@codegouvfr/react-dsfr": "^0.73.2",
         "@emotion/react": "^11.11.0",
         "@emotion/server": "^11.11.0",
         "@emotion/styled": "^11.11.0",
         "@mui/icons-material": "^5.11.16",
         "@mui/material": "^5.13.3",
-        "@mui/x-data-grid": "^5.0.12",
         "@mui/system": "^5.13.2",
+        "@mui/x-data-grid": "^5.0.12",
         "@mui/x-date-pickers": "^5.0.12",
         "dayjs": "^1.11.7",
         "next": "^13.4.7",
@@ -32,7 +32,7 @@
         "@types/react": "18.0.26",
         "eslint": "7.30.0",
         "eslint-config-next": "11.0.1",
-        "typescript": "^4.9.4",
-        "sass": "^1.62.1"
+        "sass": "^1.64.1",
+        "typescript": "^4.9.4"
     }
 }
