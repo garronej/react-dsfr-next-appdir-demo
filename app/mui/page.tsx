@@ -561,20 +561,20 @@ const { DataGridDemo } = (() => {
 			field: 'firstName',
 			headerName: 'First name',
 			width: 150,
-			editable: true,
+			editable: true
 		},
 		{
 			field: 'lastName',
 			headerName: 'Last name',
 			width: 150,
-			editable: true,
+			editable: true
 		},
 		{
 			field: 'age',
 			headerName: 'Age',
 			type: 'number',
 			width: 110,
-			editable: true,
+			editable: true
 		},
 		{
 			field: 'fullName',
@@ -583,7 +583,7 @@ const { DataGridDemo } = (() => {
 			sortable: false,
 			width: 160,
 			valueGetter: (params: GridValueGetterParams) =>
-				`${params.row.firstName || ''} ${params.row.lastName || ''}`,
+				`${params.row.firstName || ''} ${params.row.lastName || ''}`
 		},
 	];
 
@@ -605,11 +605,7 @@ const { DataGridDemo } = (() => {
 				<DataGrid
 					rows={rows}
 					columns={columns}
-					pageSize={5}
-					rowsPerPageOptions={[5]}
 					checkboxSelection
-					disableSelectionOnClick
-					experimentalFeatures={{ newEditingApi: true }}
 				/>
 			</Box>
 		);
