@@ -11,14 +11,14 @@
         "prebuild": "only-include-used-icons"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^1.0.0",
+        "@codegouvfr/react-dsfr": "^1.0.1",
         "@emotion/react": "^11.11.0",
         "@emotion/server": "^11.11.0",
         "@emotion/styled": "^11.11.0",
-        "@mui/icons-material": "^5.11.16",
-        "@mui/material": "^5.13.3",
+        "@mui/icons-material": "^5.14.18",
+        "@mui/material": "^5.14.18",
         "@mui/system": "^5.13.2",
-        "@mui/x-data-grid": "^5.0.12",
+        "@mui/x-data-grid": "^6.18.2",
         "@mui/x-date-pickers": "^5.0.12",
         "dayjs": "^1.11.7",
         "next": "^13.4.19",
