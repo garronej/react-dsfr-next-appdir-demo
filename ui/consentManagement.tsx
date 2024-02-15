@@ -1,8 +1,11 @@
 "use client";
 
 import { createConsentManagement } from "@codegouvfr/react-dsfr/consentManagement";
-import { startEulerianAnalytics } from "@codegouvfr/react-dsfr/eulerianAnalytics";
+//import { startEulerianAnalytics } from "@codegouvfr/react-dsfr/eulerianAnalytics";
 
+// We do not own the react-dsfr.fr domain anymore (official domain should be .gouv.fr)
+// so we disable Eulerian Analytics because I don't want to set it up again on the vercel domain.  
+/*
 const prEulerianApi = startEulerianAnalytics({
     "domain": "zpzs.next-demo.react-dsfr.fr",
     "site": {
@@ -10,6 +13,7 @@ const prEulerianApi = startEulerianAnalytics({
         "entity": "Direction interministeriel du numérique"
     }
 });
+*/
 
 export const {
     ConsentBannerAndConsentManagement,
@@ -33,6 +37,7 @@ export const {
     },
     "consentCallback": async ({ finalityConsent }) => {
 
+        /*
         const eulerian = await prEulerianApi;
 
         if (finalityConsent.eulerianAnalytics) {
@@ -42,6 +47,7 @@ export const {
             console.log("Disabling eulerian analytics");
             eulerian.disable();
         }
+        */
 
     }
 });
