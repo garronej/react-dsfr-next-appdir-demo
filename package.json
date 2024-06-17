@@ -21,7 +21,7 @@
         "@mui/x-data-grid": "^6.18.2",
         "@mui/x-date-pickers": "^5.0.12",
         "dayjs": "^1.11.7",
-        "next": "^14.1.0",
+        "next": "^14.2.4",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "tsafe": "^1.6.5",
