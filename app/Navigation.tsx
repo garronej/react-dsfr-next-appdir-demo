@@ -11,25 +11,25 @@ export function Navigation() {
 		<MainNavigation
 			items={[
 				{
-					"text": "Home",
-					"linkProps": {
-						"href": "/"
+					text: "Home",
+					linkProps: {
+						href: "/"
 					},
-					"isActive": segment === null
+					isActive: segment === null
 				},
 				{
-					"text": "Mui playground",
-					"linkProps": {
-						"href": "/mui"
+					text: "Mui playground",
+					linkProps: {
+						href: "/mui"
 					},
-					"isActive": segment === "mui"
+					isActive: segment === "mui"
 				},
 				{
-					"text": "Empty page",
-					"linkProps": {
-						"href": "/empty"
+					text: "Empty page",
+					linkProps: {
+						href: "/empty"
 					},
-					"isActive": segment === "empty"
+					isActive: segment === "empty"
 				}
 			]}
 		/>

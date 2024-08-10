@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 	return (
 		<html {...getHtmlAttributes({ defaultColorScheme })}>
 			<head>
-				<title>Next 13 AppDir Demo DSFR setup</title>
+				<title>Next 14 App Router Demo Setup</title>
 				<StartDsfr />
 				<DsfrHead
 					Link={Link}
@@ -43,30 +43,30 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 			</head>
 			<body
 				style={{
-					"minHeight": "100vh",
-					"display": "flex",
-					"flexDirection": "column"
+					minHeight: "100vh",
+					display: "flex",
+					flexDirection: "column"
 				}}
 			>
 				<DsfrProvider>
 					<ConsentBannerAndConsentManagement />
-					<NextAppDirEmotionCacheProvider options={{ "key": "css" }}>
+					<NextAppDirEmotionCacheProvider options={{ key: "css" }}>
 						<MuiDsfrThemeProvider>
 							<Header
 								brandTop={<>INTITULE<br />OFFICIEL</>}
 								serviceTitle="Nom du site / service"
 								homeLinkProps={{
-									"href": "/",
-									"title": "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+									href: "/",
+									title: "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
 								}}
 								quickAccessItems={[
 									headerFooterDisplayItem,
 									{
-										"iconId": "ri-mail-line",
-										"linkProps": {
-											"href": "mailto:contact@code.gouv.fr",
+										iconId: "ri-mail-line",
+										linkProps: {
+											href: "mailto:contact@code.gouv.fr",
 										},
-										"text": "Contact us"
+										text: "Contact us"
 									},
 									<LoginHeaderItem key={0} />
 								]}
@@ -74,11 +74,11 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 							/>
 							<div
 								style={{
-									"flex": 1,
-									"margin": "auto",
-									"maxWidth": 1000,
+									flex: 1,
+									margin: "auto",
+									maxWidth: 1000,
 									...fr.spacing("padding", {
-										"topBottom": "10v"
+										topBottom: "10v"
 									})
 								}}>
 								{children}
