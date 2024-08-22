@@ -1,4 +1,4 @@
-import { NextAppDirEmotionCacheProvider } from "tss-react/next";
+import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir";
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
