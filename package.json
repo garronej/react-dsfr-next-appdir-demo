@@ -12,18 +12,19 @@
     },
     "dependencies": {
         "@codegouvfr/react-dsfr": "^1.11.7",
+        "@emotion/cache": "^11.13.1",
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
         "@mui/icons-material": "^6.0.2",
         "@mui/material": "^6.0.2",
+        "@mui/material-nextjs": "^6.0.2",
         "@mui/system": "^6.0.2",
         "@mui/x-data-grid": "^6.18.2",
         "@mui/x-date-pickers": "^5.0.12",
         "dayjs": "^1.11.7",
         "next": "^14.2.7",
         "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "tss-react": "^4.9.13"
+        "react-dom": "18.2.0"
     },
     "devDependencies": {
         "@types/node": "^18.8.2",

@@ -1,4 +1,4 @@
-import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
@@ -48,9 +48,9 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 					flexDirection: "column"
 				}}
 			>
-				<DsfrProvider>
-					<ConsentBannerAndConsentManagement />
-					<NextAppDirEmotionCacheProvider options={{ key: "css" }}>
+				<AppRouterCacheProvider>
+					<DsfrProvider>
+						<ConsentBannerAndConsentManagement />
 						<MuiDsfrThemeProvider>
 							<Header
 								brandTop={<>INTITULE<br />OFFICIEL</>}
@@ -99,8 +99,8 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 								]}
 							/>
 						</MuiDsfrThemeProvider>
-					</NextAppDirEmotionCacheProvider>
-				</DsfrProvider>
+					</DsfrProvider>
+				</AppRouterCacheProvider>
 			</body>
 		</html>
 	);

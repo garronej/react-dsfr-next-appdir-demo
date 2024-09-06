@@ -4,14 +4,12 @@ import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
-import { useStyles } from "tss-react/dsfr";
 import { fr } from "@codegouvfr/react-dsfr";
 
 export function ClientComponent() {
 
+  // useIsDark requires "use client"
   const { isDark } = useIsDark();
-
-  const { css } = useStyles();
 
   return (
     <>
@@ -22,10 +20,12 @@ export function ClientComponent() {
         <Button variant="outlined">Outlined</Button>
       </Stack>
       <p
-      className={css({
-        marginTop: fr.spacing("7v")
-      })}
-      >Is dark? {isDark ? "yes" : "no"}</p>
+        style={{
+          marginTop: fr.spacing("7v")
+        }}
+      >
+        Is dark? {isDark ? "yes" : "no"}
+      </p>
     </>
   );
 }
