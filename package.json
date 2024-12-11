@@ -11,7 +11,7 @@
         "prebuild": "react-dsfr update-icons"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^1.13.4",
+        "@codegouvfr/react-dsfr": "^1.16.4",
         "@emotion/cache": "^11.13.1",
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
