@@ -20,7 +20,7 @@ import {
 
 export default function RootLayout({ children }: { children: React.JSX.Element; }) {
 
-	const lang = "en";
+	const lang = undefined; // Can be "fr" or "en" ...
 
 	return (
 		<html {...getHtmlAttributes({ defaultColorScheme, lang })}>
@@ -53,6 +53,8 @@ export default function RootLayout({ children }: { children: React.JSX.Element; 
 				<AppRouterCacheProvider>
 					<DsfrProvider
 						lang={lang}
+						defaultColorScheme={defaultColorScheme}
+						Link={Link}
 					>
 						<ConsentBannerAndConsentManagement />
 						<MuiDsfrThemeProvider>
