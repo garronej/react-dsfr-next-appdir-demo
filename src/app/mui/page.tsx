@@ -658,6 +658,7 @@ const { RecipeReviewCard } = (() => {
 	}
 
 	const ExpandMore = styled((props: ExpandMoreProps) => {
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		const { expand, ...other } = props;
 		return <IconButton {...other} />;
 	})(({ theme, expand }) => ({

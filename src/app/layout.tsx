@@ -1,4 +1,4 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
@@ -18,10 +18,12 @@ import {
 	FooterPersonalDataPolicyItem
 } from "../ui/consentManagement";
 
-export default function RootLayout({ children }: { children: JSX.Element; }) {
+export default function RootLayout({ children }: { children: React.JSX.Element; }) {
+
+	const lang = "en";
 
 	return (
-		<html {...getHtmlAttributes({ defaultColorScheme })}>
+		<html {...getHtmlAttributes({ defaultColorScheme, lang })}>
 			<head>
 				<title>Next 14 App Router Demo Setup</title>
 				<StartDsfr />
@@ -49,7 +51,9 @@ export default function RootLayout({ children }: { children: JSX.Element; }) {
 				}}
 			>
 				<AppRouterCacheProvider>
-					<DsfrProvider>
+					<DsfrProvider
+						lang={lang}
+					>
 						<ConsentBannerAndConsentManagement />
 						<MuiDsfrThemeProvider>
 							<Header

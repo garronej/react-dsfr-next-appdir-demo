@@ -1,37 +1,39 @@
 {
-    "name": "ssr",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "predev": "react-dsfr update-icons",
-        "prebuild": "react-dsfr update-icons"
-    },
-    "dependencies": {
-        "@codegouvfr/react-dsfr": "^1.16.4",
-        "@emotion/cache": "^11.13.1",
-        "@emotion/react": "^11.13.3",
-        "@emotion/styled": "^11.13.0",
-        "@mui/icons-material": "^6.0.2",
-        "@mui/material": "^6.0.2",
-        "@mui/material-nextjs": "^6.0.2",
-        "@mui/system": "^6.0.2",
-        "@mui/x-data-grid": "^6.18.2",
-        "@mui/x-date-pickers": "^5.0.12",
-        "dayjs": "^1.11.7",
-        "next": "^14.2.7",
-        "react": "18.2.0",
-        "react-dom": "18.2.0"
-    },
-    "devDependencies": {
-        "@types/node": "^18.8.2",
-        "@types/react": "18.0.26",
-        "eslint": "7.30.0",
-        "eslint-config-next": "11.0.1",
-        "sass": "^1.78.0",
-        "typescript": "^5.5.3"
-    }
+  "name": "react-dsfr-next-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "react-dsfr update-icons",
+    "prebuild": "react-dsfr update-icons",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@codegouvfr/react-dsfr": "1.20.4",
+    "@emotion/react": "^11.14.0",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.0",
+    "@mui/material": "^7.0.0",
+    "@mui/material-nextjs": "^7.0.0",
+    "@mui/system": "^6.0.2",
+    "@mui/x-data-grid": "^6.18.2",
+    "@mui/x-date-pickers": "^5.0.12",
+    "dayjs": "^1.11.7",
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "sass": "^1.86.0",
+    "typescript": "^5"
+  }
 }
