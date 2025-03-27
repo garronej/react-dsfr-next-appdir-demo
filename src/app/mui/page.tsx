@@ -60,6 +60,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { StartDsfrOnHydration } from "../../dsfr-bootstrap";
 
 export default function Mui() {
 
@@ -67,6 +68,7 @@ export default function Mui() {
 
 	return (
 		<>
+			<StartDsfrOnHydration />
 			<FormControlLabel control={<Switch
 				checked={isDark}
 				onChange={event => setIsDark(event.target.checked)}

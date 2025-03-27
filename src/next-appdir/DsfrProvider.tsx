@@ -70,9 +70,14 @@ export function DsfrProvider(props: DsfrProviderProps) {
         "nextParams": {
             "doPersistDarkModePreferenceWithCookie": false,
             "registerEffectAction": action => {
+
+                console.log("registerEffectAction", action);
+
                 if (isAfterFirstEffect) {
+                    console.log("run now");
                     action();
                 } else {
+                    console.log("push");
                     actions.push(action);
                 }
             }
@@ -105,20 +110,23 @@ let isAfterFirstEffect = false;
 const actions: (() => void)[] = [];
 
 function dsfrEffect(): void {
-    if (isAfterFirstEffect) {
-        return;
-    }
-    isAfterFirstEffect = true;
-    actions.forEach(action => action());
+  if (isAfterFirstEffect) {
+    return;
+  }
+  isAfterFirstEffect = true;
+  actions.forEach((action) => {
+    console.log("running action", action);
+    action();
+  });
 }
 
-export function StartDsfrOnHydration(){
+export function StartDsfrOnHydration() {
+  useEffect(() => {
+    console.log("wesh hydratation!");
 
-    useEffect(() => {
-        dsfrEffect();
-    }, []);
+    dsfrEffect();
+  }, []);
 
-    return null;
-
+  return null;
 }
 
