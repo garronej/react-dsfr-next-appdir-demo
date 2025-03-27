@@ -1,17 +1,13 @@
 import {
-  DsfrHead as DsfrHead_base,
+  DsfrHeadBase,
   type DsfrHeadProps,
-  getHtmlAttributes as getHtmlAttributes_base,
+  createGetHtmlAttributes
 } from "../next-appdir/server-only-index";
 import { defaultColorScheme } from "./defaultColorScheme";
 import Link from "next/link";
 
-export function getHtmlAttributes(params: { lang: string | undefined }) {
-  const { lang } = params;
+export const { getHtmlAttributes } = createGetHtmlAttributes({ defaultColorScheme });
 
-  return getHtmlAttributes_base({ defaultColorScheme, lang });
-}
-
-export function DsfrHead(props: Omit<DsfrHeadProps, "Link">) {
-  return <DsfrHead_base Link={Link} {...props} />;
+export function DsfrHead(props: DsfrHeadProps) {
+  return <DsfrHeadBase Link={Link} {...props} />;
 }

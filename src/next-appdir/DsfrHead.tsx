@@ -22,7 +22,6 @@ export type DsfrHeadProps = {
    * Preloading of fonts is only enabled in production.
    */
   preloadFonts?: (keyof typeof fontUrlByFileBasename)[];
-  Link: Function;
   /**
    * When set, the value will be used as the nonce attribute of subsequent script tags.
    *
@@ -53,7 +52,9 @@ export type DsfrHeadProps = {
 
 const isProduction = process.env.NODE_ENV !== "development";
 
-export function DsfrHead(props: DsfrHeadProps) {
+export function DsfrHeadBase(props: DsfrHeadProps & {
+  Link: Function;
+}) {
   const {
     preloadFonts = [],
     Link,

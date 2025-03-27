@@ -1,3 +1,3 @@
 
-export { getHtmlAttributes } from "./getHtmlAttributes";
-export { DsfrHead, type DsfrHeadProps } from "./DsfrHead";
+export { createGetHtmlAttributes } from "./getHtmlAttributes";
+export { DsfrHeadBase, type DsfrHeadProps } from "./DsfrHead";

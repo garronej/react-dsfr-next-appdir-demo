@@ -14,9 +14,6 @@ import { start } from "@codegouvfr/react-dsfr/start";
 export type DsfrProviderProps = {
   children: ReactNode;
   lang: string | undefined;
-  Link: Function;
-
-  defaultColorScheme: DefaultColorScheme;
   /** Default: false */
   verbose?: boolean;
   /**
@@ -48,7 +45,10 @@ export type DsfrProviderProps = {
   trustedTypesPolicyName?: string;
 };
 
-export function DsfrProvider(props: DsfrProviderProps) {
+export function DsfrProviderBase(props: DsfrProviderProps & {
+  Link: Function;
+  defaultColorScheme: DefaultColorScheme;
+}) {
   const { children, lang, Link, defaultColorScheme, verbose = false, doCheckNonce =false, trustedTypesPolicyName = "react-dsfr" } = props;
 
   /*

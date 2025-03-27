@@ -1,6 +1,5 @@
-
 "use client";
-import { DsfrProvider as DsfrProvider_base, StartDsfrOnHydration } from "../next-appdir";
+import { DsfrProviderBase, StartDsfrOnHydration } from "../next-appdir";
 import { defaultColorScheme } from "./defaultColorScheme";
 import Link from "next/link";
 
@@ -10,19 +9,20 @@ declare module "../next-appdir" {
   }
 }
 
-export function DsfrProvider(props: { lang: string | undefined; children: React.ReactNode; }) { 
+export function DsfrProvider(props: {
+  lang: string | undefined;
+  children: React.ReactNode;
+}) {
   const { lang, children } = props;
   return (
-    <DsfrProvider_base
+    <DsfrProviderBase
       lang={lang}
       defaultColorScheme={defaultColorScheme}
       Link={Link}
     >
       {children}
-    </DsfrProvider_base>
+    </DsfrProviderBase>
   );
 }
 
 export { StartDsfrOnHydration };
-
-
