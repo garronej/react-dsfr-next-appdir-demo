@@ -1,34 +1,29 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
-import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
-import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
-import { StartDsfr } from "./StartDsfr";
-import { defaultColorScheme } from "./defaultColorScheme";
 import MuiDsfrThemeProvider from "@codegouvfr/react-dsfr/mui";
 import { Header } from "@codegouvfr/react-dsfr/Header";
 import { Footer } from "@codegouvfr/react-dsfr/Footer";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Navigation } from "./Navigation";
-import Link from "next/link";
 import { LoginHeaderItem } from "./LoginHeaderItem";
 import {
 	ConsentBannerAndConsentManagement,
 	FooterConsentManagementItem,
 	FooterPersonalDataPolicyItem
 } from "../ui/consentManagement";
+import { getHtmlAttributes, DsfrHead } from "../dsfr-bootstrap/server-only-index";
+import { DsfrProvider } from "../dsfr-bootstrap";
+
 
 export default function RootLayout({ children }: { children: React.JSX.Element; }) {
 
 	const lang = undefined; // Can be "fr" or "en" ...
 
 	return (
-		<html {...getHtmlAttributes({ defaultColorScheme, lang })}>
+		<html {...getHtmlAttributes({ lang })}>
 			<head>
-				<title>Next 14 App Router Demo Setup</title>
-				<StartDsfr />
+				<title>Next 15 App Router Demo Setup</title>
 				<DsfrHead
-					Link={Link}
 					preloadFonts={[
 						//"Marianne-Light",
 						//"Marianne-Light_Italic",
@@ -51,11 +46,7 @@ export default function RootLayout({ children }: { children: React.JSX.Element; 
 				}}
 			>
 				<AppRouterCacheProvider>
-					<DsfrProvider
-						lang={lang}
-						defaultColorScheme={defaultColorScheme}
-						Link={Link}
-					>
+					<DsfrProvider lang={lang} >
 						<ConsentBannerAndConsentManagement />
 						<MuiDsfrThemeProvider>
 							<Header

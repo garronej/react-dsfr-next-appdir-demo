@@ -4,11 +4,13 @@ import { Tabs } from "@codegouvfr/react-dsfr/Tabs";
 import { Summary } from "@codegouvfr/react-dsfr/Summary";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ClientComponent } from "../ui/ClientComponent";
+import { StartDsfrOnHydration } from "../dsfr-bootstrap";
 
 export default function Page() {
 
     return (
         <>
+            <StartDsfrOnHydration />
             <a href="https://github.com/garronej/react-dsfr-next-appdir-demo" target="_blank" rel="noreferrer">Source code of this Next.js App Router demo setup</a>
             <br/>
             <br/>

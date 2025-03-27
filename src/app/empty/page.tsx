@@ -1,6 +1,5 @@
+import { ClientComponent } from "../../ui/ClientComponent";
 
 export default function Page() {
-
-    return null;
-
+    return <ClientComponent />;
 }
