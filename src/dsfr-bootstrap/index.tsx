@@ -1,5 +1,9 @@
 "use client";
-import { DsfrProviderBase, StartDsfrOnHydration } from "@codegouvfr/react-dsfr/next-app-router";
+import {
+  DsfrProviderBase,
+  type DsfrProviderProps,
+  StartDsfrOnHydration,
+} from "@codegouvfr/react-dsfr/next-app-router";
 import { defaultColorScheme } from "./defaultColorScheme";
 import Link from "next/link";
 
@@ -9,19 +13,13 @@ declare module "@codegouvfr/react-dsfr/next-app-router" {
   }
 }
 
-export function DsfrProvider(props: {
-  lang: string | undefined;
-  children: React.ReactNode;
-}) {
-  const { lang, children } = props;
+export function DsfrProvider(props: DsfrProviderProps) {
   return (
     <DsfrProviderBase
-      lang={lang}
       defaultColorScheme={defaultColorScheme}
       Link={Link}
-    >
-      {children}
-    </DsfrProviderBase>
+      {...props}
+    />
   );
 }
 
