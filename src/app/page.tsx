@@ -6,7 +6,17 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { ClientComponent } from "../ui/ClientComponent";
 import { StartDsfrOnHydration } from "../dsfr-bootstrap";
 
+export const dynamic = "force-dynamic"; // 🧠 disables SSG and SSR caching
+
+
 export default function Page() {
+
+    if (typeof window === "undefined") {
+        // Only run this on the server at runtime (not build time)
+        if (process.env.NODE_ENV === "production") {
+            throw new Error("Server-side runtime error triggered only at runtime");
+        }
+    }
 
     return (
         <>
