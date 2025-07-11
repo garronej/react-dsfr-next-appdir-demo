@@ -82,10 +82,10 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
-"@codegouvfr/react-dsfr@^1.23.14":
-  version "1.23.14"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.23.14.tgz#7b28cdcda1a238a0765f87748a500a609008fd30"
-  integrity sha512-6EY9uG/tIKhwivmN/FYX9bd8pgg2A5s78ELP5W6FuHpNhbT8qGU2jL4cSNn2RiIibQXMsk9AQaTHEfnqFzccFQ==
+"@codegouvfr/react-dsfr@^1.25.5":
+  version "1.25.5"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.25.5.tgz#f5c601df6f2b05417786d5bbd0befb56dee99bdd"
+  integrity sha512-JUZBz/x8f7WJyV9xgLLaUwoj9YciybqKVsSs/w/B2sEKOR2elRMSKbHwIbnjQAaduJcXXk6kVWW2EYjMoLQgKg==
   dependencies:
     tsafe "^1.8.5"
     yargs-parser "^21.1.1"
