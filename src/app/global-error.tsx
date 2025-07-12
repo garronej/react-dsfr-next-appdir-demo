@@ -10,6 +10,8 @@ import { DsfrProvider } from "../dsfr-bootstrap";
 import { Tabs } from "@codegouvfr/react-dsfr/Tabs";
 import { fr } from "@codegouvfr/react-dsfr";
 import { StartDsfrOnHydration } from "../dsfr-bootstrap";
+import Button from "@mui/material/Button";
+import { DarkModeSwitch } from "../ui/DarkModeSwitch";
 
 export default function GlobalError({
   error,
@@ -74,6 +76,8 @@ export default function GlobalError({
                   },
                 ]}
               />
+              <Button>MUI Button</Button>
+              <DarkModeSwitch />
             </MuiDsfrThemeProvider>
           </DsfrProvider>
         </AppRouterCacheProvider>
