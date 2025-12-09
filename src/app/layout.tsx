@@ -15,7 +15,7 @@ import { getHtmlAttributes, DsfrHead } from "../dsfr-bootstrap/server-only-index
 import { DsfrProvider } from "../dsfr-bootstrap";
 
 
-export default function RootLayout({ children }: { children: React.JSX.Element; }) {
+export default function RootLayout({ children }: { children: React.ReactNode; }) {
 
 	const lang = undefined; // Can be "fr" or "en" ...
 
